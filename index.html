@@ -15,6 +15,231 @@ body {
 
 header {
     background: linear-gradient(rgba(60, 94, 50, 0.8), rgba(60, 94, 50, 0.8)),
+                url('images/hof.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+nav {
+    background: #4a6b3c;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    background: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #3e5f2f;
+}
+
+.highlight {
+    background: #eef5e8;
+    padding: 15px;
+    border-left: 5px solid #4a6b3c;
+    margin-top: 10px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #e0ded9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background: #4a6b3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3e5f2f;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Verein Stedebach e.V.</h1>
+<p>Nachhaltige Landwirtschaft fördern • Kulturlandschaft sichern • Wissen vermitteln</p>
+</header>
+
+<nav>
+<a href="#about">Über uns</a>
+<a href="#hof">Hof</a>
+<a href="#events">Termine</a>
+<a href="#contact">Kontakt</a>
+</nav>
+
+<div class="container">
+
+<section id="about">
+<h2>Über den Verein</h2>
+
+<img src="images/hof.jpg" class="image" alt="Hof Stedebach">
+
+<p>
+Der Verein Stedebach e.V. sichert die biologisch-dynamische Bewirtschaftung des Hofes und engagiert sich für Natur- und Artenschutz.
+</p>
+
+<div class="highlight">
+Ein zentrales Ziel ist die Vermittlung von Wissen über nachhaltige Landwirtschaft.
+</div>
+
+</section>
+
+<section id="hof">
+<h2>Hof Stedebach</h2>
+
+<p>
+Seit über 40 Jahren wird hier nach Demeter-Richtlinien ökologisch gewirtschaftet. Damit gehört Hof Stedebach zu den Pionieren und
+ältesten landwirtschaftlichen Betrieben in Hessen, die auf der Grundlage der biologisch dynamischen Wirtschaftsweise arbeiten. 
+</p>
+
+<h3>Tierhaltung</h3>
+
+<p>
+60 Milchkühe, 40 Jungrinder und Kälber leben auf dem Hof. Die Kühe behalten ihre Hörner und werden in einem offenen Boxlaufstall gehalten. 
+Im Sommer sind sie tagsüber auf der Weide, zu den Melkzeiten gibt es zusätzlich frisches Ackerfutter, im Winter werden die Tiere
+mit Heu und Silage vom eigenen Betrieb gefüttert. Eine flächengebundene Viehhaltung in einem möglichst geschlossenen Betriebsorganismus 
+ist ein wichtiges Merkmal der biologisch-dynamischen Landwirtschaft. 
+</p>
+
+<h3>Ackerbau</h3>
+
+<p>
+Der anfallende Mist, der Einsatz der biologisch-dynamischen Präparate und eine vielgliedrige Fruchtfolge sorgen für den Aufbau und Erhalt
+der Bodenfruchtbarkeit. Kleegras, Dinkel, Roggen, Hackfrüchte und Weizen folgen in langjährigem Wechsel aufeinander. Auf den Einsatz von
+chemischen Spritz- oder Düngemitteln wird konsequent verzichtet.  
+</p>
+
+<img src="images/gruenland.jpg" class="image" alt="Artenreiches Grünland">
+<img src="images/ackerflora.jpg" class="image" alt="Vitale Ackerflora">
+
+<div class="highlight">
+<h3>🌾 Erntedank</h3>
+<img src="images/erntedank.jpg" class="image" alt="Erntedank">
+<p>
+Der Erntedank ist ein wichtiger Bestandteil des Hoflebens und verbindet Landwirtschaft, Gemeinschaft und Tradition.
+</p>
+</div>
+
+</section>
+
+<section id="events">
+<h2>Kuhaustrieb 2026</h2>
+
+<img src="images/kuhaustrieb.jpg" class="image" style="max-width:400px;" alt="Kuhaustrieb">
+
+<div class="highlight">
+<p><strong>📅 19. April 2026 • 11–14 Uhr</strong></p>
+
+<p>
+Erleben Sie den ersten Weidegang unserer Kühe und feiern Sie mit uns den Start der Weidesaison!
+</p>
+
+<ul>
+<li>Kaffee & Kuchen</li>
+<li>Hofführung</li>
+<li>Kinderprogramm</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Kontakt</h2>
+
+<h3>Kontaktformular</h3>
+
+<form action="https://formspree.io/f/your-id" method="POST">
+<input type="text" name="name" placeholder="Ihr Name" required>
+<input type="email" name="email" placeholder="Ihre E-Mail" required>
+<textarea name="message" placeholder="Ihre Nachricht" required></textarea>
+<button type="submit">Absenden</button>
+</form>
+
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 Verein Stedebach e.V.</p>
+<p>
+<a href="impressum.html">Impressum</a> | 
+<a href="datenschutz.html">Datenschutz</a>
+</p>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verein Stedebach</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f3ef;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(rgba(60, 94, 50, 0.8), rgba(60, 94, 50, 0.8)),
                 url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');
     background-size: cover;
     background-position: center;
