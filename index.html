@@ -7,8 +7,6 @@
 <title>Verein Stedebach e.V. | Landwirtschaft bei Marburg</title>
 
 <meta name="description" content="Verein Stedebach e.V. – nachhaltige Landwirtschaft, Hofleben und Veranstaltungen rund um den Demeter-Hof bei Marburg.">
-<meta name="keywords" content="Stedebach, Landwirtschaft, Demeter, Hof, Marburg, Verein, nachhaltige Landwirtschaft">
-<meta name="author" content="Verein Stedebach e.V.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -16,63 +14,80 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background: #f5f3ef;
-    line-height: 1.6;
+    background: #f7f6f3;
+    color: #333;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(rgba(60,94,50,0.75), rgba(60,94,50,0.75)),
+    background: linear-gradient(rgba(40,60,35,0.6), rgba(40,60,35,0.6)),
                 url('images/hof.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 90px 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 42px;
+    font-size: 38px;
+    font-weight: 600;
 }
 
 /* NAV */
 nav {
-    background: #4a6b3c;
-    padding: 15px;
-    text-align: center;
+    background: #3f5c34;
+    padding: 12px 20px;
     position: sticky;
     top: 0;
 }
 
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* CONTAINER */
-.container {
+.nav-container {
     max-width: 1100px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* SECTION */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* CONTENT */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 15px;
+}
+
 section {
     background: white;
-    margin: 30px 20px;
+    margin: 25px 0;
     padding: 35px;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    border-radius: 12px;
+    border: 1px solid #eee;
 }
 
 h2 {
-    color: #3e5f2f;
+    margin-top: 0;
+    color: #2f4a28;
 }
 
 /* FLEX */
@@ -85,7 +100,7 @@ h2 {
 
 .flex img {
     width: 45%;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .flex div {
@@ -95,26 +110,26 @@ h2 {
 /* IMAGE */
 .image {
     width: 100%;
-    height: 260px;
+    height: 240px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
     margin: 15px 0;
 }
 
 /* HIGHLIGHT */
 .highlight {
-    background: #eef5e8;
+    background: #f1f6ed;
     padding: 20px;
-    border-left: 5px solid #4a6b3c;
+    border-left: 4px solid #3f5c34;
     margin-top: 20px;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 /* FORM */
 form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 input, textarea {
@@ -125,27 +140,41 @@ input, textarea {
 
 button {
     padding: 12px;
-    background: linear-gradient(135deg, #4a6b3c, #6f8f5b);
+    background: #3f5c34;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    transform: translateY(-2px);
+    font-weight: 500;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 25px;
-    background: #e0ded9;
+    padding: 20px;
+    background: #e9e7e2;
+    font-size: 14px;
 }
 
 /* MOBILE */
 @media (max-width: 800px) {
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #3f5c34;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
     .flex {
         flex-direction: column;
     }
@@ -155,13 +184,12 @@ footer {
         width: 100%;
     }
 
-    nav a {
-        display: block;
-        margin: 10px 0;
+    header {
+        padding: 60px 15px;
     }
 
     header h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
 </style>
@@ -175,10 +203,16 @@ footer {
 </header>
 
 <nav>
+<div class="nav-container">
+<div class="menu-toggle">☰</div>
+
+<div class="menu">
 <a href="#about">Über uns</a>
 <a href="#hof">Hof</a>
 <a href="#events">Termine</a>
 <a href="#contact">Kontakt</a>
+</div>
+</div>
 </nav>
 
 <div class="container">
@@ -193,7 +227,9 @@ footer {
 <p>
 Der gemeinnützige Verein Stedebach e.V. ist Eigentümer von einem der vier Höfe in Stedebach, einem kleinen Ort in der Nähe von Marburg. 
 Ziel ist die dauerhafte und nachhaltige Sicherung der Flächen und die Förderung biologisch-dynamischer Landwirtschaft. 
-Gemeinsam mit dem Landwirt kümmern sich die Mitglieder des Vereins um den Erhalt der Gebäude und die Entwicklung der Flächen im Hinblick auf Natur- und Artenschutz.
+Gemeinsam mit dem Landwirt kümmern sich die Mitglieder des Vereins um den Erhalt der Gebäude aber auch um die Entwicklung der vereinseigenen
+landwirtschaftlichen Flächen im Hinblick auf Natur- und Artenschutz. Neben dem Erhalt und der Entwicklung von Hof und Flächen ist ein weiteres wichtiges Ziel die Vermittlung von
+Wissen über traditionelle Landwirtschaft und den hohen Wert einer intakten Kulturlandschaft für die Natur.
 </p>
 
 <div class="highlight">
@@ -208,38 +244,37 @@ Wir suchen neue, engagierte Mitglieder, die Lust haben, etwas zu bewegen!
 <h2>Hof Stedebach</h2>
 
 <p>
-Seit über 40 Jahren wird hier nach Demeter-Richtlinien ökologisch gewirtschaftet. Damit gehört Hof Stedebach zu den Pionieren und ältesten landwirtschaftlichen Betrieben in Hessen, die auf der Grundlage der biologisch dynamischen Wirtschaftsweise arbeiten.  
+Seit über 40 Jahren wird hier nach Demeter-Richtlinien ökologisch gewirtschaftet. Damit gehört Hof Stedebach zu den Pionieren und
+ältesten landwirtschaftlichen Betrieben in Hessen, die auf der Grundlage der biologisch dynamischen Wirtschaftsweise arbeiten. 
 </p>
 
-<div class="flex">
-<img src="images/gruenland.jpg" alt="Grünland">
-
-<div>
 <h3>Tierhaltung</h3>
+
 <p>
-60 Milchkühe, 40 Jungrinder und Kälber leben auf dem Hof. Die Kühe behalten ihre Hörner und werden in einem offenen Boxlaufstall gehalten. Im Sommer sind sie tagsüber auf der Weide, zu den Melkzeiten gibt es zusätzlich frisches Ackerfutter, im Winter werden die Tiere mit Heu und Silage vom eigenen Betrieb gefüttert. Eine flächengebundene Viehhaltung in einem möglichst geschlossenen Betriebsorganismus ist ein wichtiges Merkmal der biologisch-dynamischen Landwirtschaft. 
+60 Milchkühe, 40 Jungrinder und Kälber leben auf dem Hof. Die Kühe behalten ihre Hörner und werden in einem offenen Boxlaufstall gehalten. 
+Im Sommer sind sie tagsüber auf der Weide, zu den Melkzeiten gibt es zusätzlich frisches Ackerfutter, im Winter werden die Tiere
+mit Heu und Silage vom eigenen Betrieb gefüttert. Eine flächengebundene Viehhaltung in einem möglichst geschlossenen Betriebsorganismus 
+ist ein wichtiges Merkmal der biologisch-dynamischen Landwirtschaft. 
 </p>
-</div>
-</div>
 
-<div class="flex">
-<img src="images/ackerflora.jpg" alt="Ackerflora">
+<img src="images/gruenland.jpg" class="image" alt="Artenreiches Grünland">
 
-<div>
 <h3>Ackerbau</h3>
-<p>
- Der anfallende Mist, der Einsatz der biologisch-dynamischen Präparate und eine vielgliedrige Fruchtfolge sorgen für den Aufbau und Erhalt der Bodenfruchtbarkeit. Kleegras, Dinkel, Roggen, Hackfrüchte und Weizen folgen in langjährigem Wechsel aufeinander. Auf den Einsatz von chemischen Spritz- oder Düngemitteln wird konsequent verzichtet.
-</p>
-</div>
-</div>
 
-<div class="highlight">
+<p>
+Der anfallende Mist, der Einsatz der biologisch-dynamischen Präparate und eine vielgliedrige Fruchtfolge sorgen für den Aufbau und Erhalt
+der Bodenfruchtbarkeit. Kleegras, Dinkel, Roggen, Hackfrüchte und Weizen folgen in langjährigem Wechsel aufeinander. Auf den Einsatz von
+chemischen Spritz- oder Düngemitteln wird konsequent verzichtet.  
+</p>
+
+<img src="images/ackerflora.jpg" class="image" alt="Vitale Ackerflora">
+
 <h3>Hofladen</h3>
-<img src="images/erntedank.jpg" class="image">
 <p>
 Im kleinen Hofladen gibt es je nach Saison frisches Gemüse, Kartoffeln, Linsen und Getreide aus eigenem Anbau.
 </p>
-</div>
+<img src="images/erntedank.jpg" class="image" alt="Hofladen">
+
 
 </section>
 
@@ -287,6 +322,12 @@ Erleben Sie den ersten Weidegang unserer Kühe und feiern Sie mit uns den Start 
 <a href="datenschutz.html">Datenschutz</a>
 </p>
 </footer>
+
+<script>
+document.querySelector(".menu-toggle").onclick = function() {
+    document.querySelector(".menu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
